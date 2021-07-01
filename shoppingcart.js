@@ -69,10 +69,6 @@ function mult_res( obj ) {
     return sum_1
 }
 
-// function give_name( obj ) {
-//     stuff = 
-// }
-
 result1 = sum_res(cart)
 result2 = mult_res(cart)
 
@@ -90,6 +86,5 @@ function drawer( res1, res2, cart ) {
 
 console.log(drawer(result1, result2, cart))
 
-// console.log(randum)
 
 
