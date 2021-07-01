@@ -36,6 +36,16 @@ let cart = [
     },
 ]
 
+function counter( obj ) {
+    x = []
+    for (var num in obj) {
+        x.push(obj[num].name)
+        
+    }
+    return x
+}
+
+randum = counter(cart)
 
 function sum_res ( obj ) {
     sum = 0;
@@ -67,19 +77,19 @@ result1 = sum_res(cart)
 result2 = mult_res(cart)
 
 function drawer( res1, res2, cart ) {
+    if (cart.length == 0) {
+        console.log("There arent any items on the cart")
+    }
     for (let item in cart) {
         console.log("Item " + item + ": " + cart[item].name + " " + cart[item].price + "€ " + cart[item].qty)
     
     }
     console.log("---------------------")
-    console.log("Total: " + cart.length + " " + "Items: ")
+    console.log("Total: " + cart.length + " " + "Items: " + randum + " Total price: " + result1)
 }
 
 console.log(drawer(result1, result2, cart))
-// banana : 3.99,
-// apple : 2.99,
-// milk : 2.50,
-// orange_juice : 2.00,
-// pork : 5.20,
-// bacon : 4.99,
-// toothpaste : 2.99
+
+// console.log(randum)
+
+
